@@ -1,0 +1,314 @@
+{
+	"info": {
+		"_postman_id": "aeadfbf9-38e3-415d-9657-4f297a06548e",
+		"name": "event-management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27456613"
+	},
+	"item": [
+		{
+			"name": "events",
+			"item": [
+				{
+					"name": "get all event",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/events",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create event",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"check limit Confrence\",\n    \"description\": \"Ruby confrence in dhaka\",\n    \"date\":\"12/28/2024\",\n    \"location\": \"Dhaka\",\n    \"max_attendees\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/events",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get event by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/events/b9a69587-2f5b-43bd-a975-329026b7ff36",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"events",
+								"b9a69587-2f5b-43bd-a975-329026b7ff36"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "most-registered",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/events/most-registered",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"events",
+								"most-registered"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update event",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Nodejs Confrence\",\n    \"description\": \"node confrence in dhaka\",\n    \"date\":\"01/01/2025\",\n    \"location\": \"Uttara, Dhaka\",\n    \"max_attendees\": 50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/events/b9a69587-2f5b-43bd-a975-329026b7ff36",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"events",
+								"b9a69587-2f5b-43bd-a975-329026b7ff36"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete event",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/events/97a03a09-20a9-424f-b31a-638513edbf33",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"events",
+								"97a03a09-20a9-424f-b31a-638513edbf33"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filter by date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/events/filter?startDate=2024-01-01&endDate=2025-12-31",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"events",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-01-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2025-12-31"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "attendees",
+			"item": [
+				{
+					"name": "create attendee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Rabbani Deooo\",\n    \"email\": \"rmdgolam213@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/attendees",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"attendees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all attendee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/attendees",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"attendees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single attendee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/attendees/bce1e9e9-1178-4893-a7c0-ca5d154db249",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"attendees",
+								"bce1e9e9-1178-4893-a7c0-ca5d154db249"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "registration",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"event_id\":\"ed5e160a-e03f-4463-8488-73f72e7efc02\",\n    \"attendee_id\":\"c26325d2-e26e-4164-9a3e-dcb1ff953509\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/registrations",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"registrations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get register user by event id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/registrations/b9a69587-2f5b-43bd-a975-329026b7ff36",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"registrations",
+								"b9a69587-2f5b-43bd-a975-329026b7ff36"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user with multiple events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/registrations/multiple-events",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"registrations",
+								"multiple-events"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
