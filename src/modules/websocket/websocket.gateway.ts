@@ -1,5 +1,3 @@
-// websocket/websocket.gateway.ts
-
 import { Injectable } from '@nestjs/common';
 import { WebSocketGateway, WebSocketServer, SubscribeMessage, MessageBody, OnGatewayInit, OnGatewayConnection, OnGatewayDisconnect } from '@nestjs/websockets';
 import { Server, Socket } from 'socket.io';
@@ -21,7 +19,6 @@ export class WebSocketGatewayService implements OnGatewayInit, OnGatewayConnecti
     console.log('Client disconnected:', client.id);
   }
 
-  // Method to emit new event notifications
   @SubscribeMessage('create-event')
   handleCreateEvent(@MessageBody() eventData: { eventTitle: string; eventDate: string }) {
     this.server.emit('new-event', eventData); 
